@@ -1,0 +1,76 @@
+# ------------------------------
+# Dependencies
+# ------------------------------
+node_modules/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+.yarn/unplugged/
+
+# ------------------------------
+# Build / Output
+# ------------------------------
+dist/
+build/
+.next/
+out/
+.vercel/
+
+# ------------------------------
+# Logs
+# ------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------
+# Environment Variables
+# ------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ------------------------------
+# OS Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# IDE / Editor
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# Cache / Temp
+# ------------------------------
+.cache/
+.tmp/
+temp/
+coverage/
+
+# ------------------------------
+# TypeScript
+# ------------------------------
+*.tsbuildinfo
+
+# ------------------------------
+# Misc
+# ------------------------------
+*.pem
+*.pid
+*.seed
+
+# ------------------------------
+# Optional (Uncomment if needed)
+# ------------------------------
+# public/uploads/
+# public/images/generated/
