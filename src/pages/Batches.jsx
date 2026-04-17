@@ -31,7 +31,7 @@ export default function Batches() {
 
       <section className="section-pad bg-white">
         <div className="container-main">
-          <SectionHeader eyebrow="2024–25 Academic Year" title="Available Batches" subtitle="Classes run Mon–Sat. Open daily until 9 PM. Contact us to confirm seat availability." />
+          <SectionHeader eyebrow="2026–27 Academic Year" title="Available Batches" subtitle="Classes run Mon–Sat. Open daily until 9 PM. Contact us to confirm seat availability." />
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
             {batchesData.map(b => {
