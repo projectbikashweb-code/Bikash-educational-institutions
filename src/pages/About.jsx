@@ -8,12 +8,12 @@ import FadeIn from '../components/animations/FadeIn'
 import { StaggerContainer, StaggerItem } from '../components/animations/StaggerContainer'
 
 const milestones = [
-  { year: '2010', event: 'Founded by dedicated educators in Srivihar Colony, Cuttack.' },
-  { year: '2013', event: 'Expanded programs to include Classes 6–8 upper primary education.' },
-  { year: '2016', event: 'Introduced CBSE and ICSE aligned preparation programs.' },
-  { year: '2018', event: 'Crossed 200+ student milestone with strong academic results.' },
-  { year: '2021', event: 'Launched concept-based and experiential learning modules.' },
-  { year: '2024', event: '500+ students served across Cuttack and Tulsipur area.' },
+  { year: '2016', event: 'Founded by dedicated educators in Srivihar Colony, Cuttack.' },
+  { year: '2018', event: 'Expanded programs to include Classes 6–8 upper primary education.' },
+  { year: '2020', event: 'Introduced CBSE and ICSE aligned preparation programs.' },
+  { year: '2022', event: 'Crossed 200+ student milestone with strong academic results.' },
+  { year: '2024', event: 'Launched concept-based and experiential learning modules.' },
+  { year: '2025', event: '500+ students served across Cuttack and Tulsipur area.' },
 ]
 
 export default function About() {
@@ -40,7 +40,7 @@ export default function About() {
             <FadeIn>
               <span className="badge bg-teal-50 text-teal-700 border border-teal-100 px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-4 inline-block">Est. {INSTITUTE.established}</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-5 font-display">
-                14+ Years of Academic Excellence
+                10+ Years of Academic Excellence
               </h2>
               <p className="text-slate-500 leading-relaxed mb-4">
                 Bikash Educational Institution was founded with a clear and powerful mission: to deliver quality education that builds real conceptual understanding in every child — not just exam scores.
@@ -52,7 +52,7 @@ export default function About() {
                 Located in Srivihar Colony, Cuttack, we serve families across the Tulsipur area and beyond, supporting both Odia and English medium learners from Class 1 through Class 8.
               </p>
               <div className="grid grid-cols-3 gap-4">
-                {[['14+', 'Years'], ['500+', 'Students'], ['5★', 'Rating']].map(([v, l]) => (
+                {[['10+', 'Years'], ['500+', 'Students'], ['5★', 'Rating']].map(([v, l]) => (
                   <div key={l} className="text-center bg-primary-50 rounded-2xl py-4 border border-primary-100">
                     <p className="text-2xl font-bold text-primary-700 font-display">{v}</p>
                     <p className="text-xs text-slate-500 mt-0.5">{l}</p>

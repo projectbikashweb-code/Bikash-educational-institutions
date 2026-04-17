@@ -5,9 +5,9 @@ import FadeIn from '../../components/animations/FadeIn'
 import { StaggerContainer, StaggerItem } from '../../components/animations/StaggerContainer'
 
 const highlights = [
-  { icon: Clock,  title: '10+ Years Experience', desc: 'Established in 2017, we have nurtured hundreds of young learners across Cuttack with quality primary education.', color: 'bg-blue-50', iconColor: 'text-blue-600', border: 'border-blue-100', image: '/images/faculty/b&s.webp' },
+  { icon: Clock,  title: '10+ Years Experience', desc: 'Established in 2016, we have nurtured hundreds of young learners across Cuttack with quality primary education.', color: 'bg-blue-50', iconColor: 'text-blue-600', border: 'border-blue-100', image: '/images/faculty/b&s.webp' },
   { icon: Star,   title: '5★ Rated Institution', desc: 'Trusted by families in Tulsipur & Cuttack — parents and students recognize us for quality and care.',      color: 'bg-yellow-50', iconColor: 'text-yellow-500', border: 'border-yellow-100', image: '/images/heroes/hero-results.jpg' },
-  { icon: Users,  title: 'Expert Faculty',        desc: 'Highly qualified teachers with 8–12+ years of specialized teaching experience for primary and upper primary levels.',   color: 'bg-teal-50', iconColor: 'text-teal-600', border: 'border-teal-100', image: '/images/faculty/group.webp' },
+  { icon: Users,  title: 'Expert Faculty',        desc: 'Highly qualified teachers with 10+ years of specialized teaching experience for primary and upper primary levels.',   color: 'bg-teal-50', iconColor: 'text-teal-600', border: 'border-teal-100', image: '/images/faculty/group.webp' },
   { icon: Heart,  title: 'Personalized Attention', desc: 'Small batches ensure every child gets individual focus, care, and mentoring — no student is left behind.',  color: 'bg-purple-50', iconColor: 'text-purple-600', border: 'border-purple-100', image: '/images/faculty/new-1-1.webp' },
 ]
 

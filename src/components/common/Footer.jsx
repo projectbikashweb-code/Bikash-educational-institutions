@@ -89,7 +89,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Bikash Educational Institution. All rights reserved.</p>
-          <p>Est. 2010 · Cuttack, Odisha</p>
+          <p>Est. 2016 · Cuttack, Odisha</p>
         </div>
       </div>
     </footer>

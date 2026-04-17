@@ -6,8 +6,8 @@ import { INSTITUTE } from '../../utils/constants'
 
 const badges = [
   { icon: Star,  label: '5★ Rated',        sub: '5+ Google Reviews' },
-  { icon: Users, label: '500+ Students',      sub: 'Since Year 2010' },
-  { icon: Award, label: '14+ Years',          sub: 'Of Excellence' },
+  { icon: Users, label: '500+ Students',      sub: 'Since Year 2016' },
+  { icon: Award, label: '10+ Years',          sub: 'Of Excellence' },
 ]
 
 export default function Hero() {
@@ -128,16 +128,16 @@ export default function Hero() {
 
                 <div className="mb-6 lg:mb-8 w-full">
                   <h2 className="text-xl lg:text-[1.35rem] leading-snug font-bold text-white font-display">Bikash Educational Institution</h2>
-                  <p className="text-[11px] lg:text-xs text-slate-300 mt-1 opacity-90 tracking-wide">Est. 2010 · Cuttack, Odisha</p>
+                  <p className="text-[11px] lg:text-xs text-slate-300 mt-1 opacity-90 tracking-wide">Est. 2016 · Cuttack, Odisha</p>
                 </div>
 
                 {/* 4 Block Stats */}
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full mb-6 lg:mb-8">
                   {[
-                    { val: '14+', label: 'Years' },
+                    { val: '10+', label: 'Years' },
                     { val: '500+', label: 'Students' },
                     { val: '5★', label: 'Rating' },
-                    { val: '1–8', label: 'Classes' },
+                    { val: '1–12th', label: 'Classes' },
                   ].map(s => (
                     <div key={s.label} className="bg-slate-900/50 backdrop-blur-md rounded-2xl p-4 lg:p-5 text-center shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10 transition-transform hover:-translate-y-1">
                       <p className="text-xl lg:text-2xl xl:text-3xl font-bold text-white font-display leading-tight drop-shadow-sm">{s.val}</p>

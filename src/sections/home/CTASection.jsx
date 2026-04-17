@@ -22,7 +22,7 @@ export default function CTASection() {
               Join Cuttack's trusted educational institution. Get personalized attention, expert faculty guidance, and a strong academic foundation for your child's bright future.
             </p>
             <ul className="flex flex-col gap-3 mb-8">
-              {['Quality education for Classes 1 to 8', 'Both Odia & English medium', 'Flexible batch timings available', 'Experienced faculty since 2010', 'Serving Tulsipur & Cuttack area'].map(f => (
+              {['Quality education for Classes 1 to 8', 'Both Odia & English medium', 'Flexible batch timings available', 'Experienced faculty since 2016', 'Serving Tulsipur & Cuttack area'].map(f => (
                 <li key={f} className="flex items-center gap-2 text-sm text-slate-600">
                   <span className="text-green-500 font-bold">✓</span> {f}
                 </li>
