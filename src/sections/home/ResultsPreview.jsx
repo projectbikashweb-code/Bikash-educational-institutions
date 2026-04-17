@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { ArrowRight, Trophy } from 'lucide-react'
+import { ArrowRight, ChevronDown, ChevronUp, Trophy } from 'lucide-react'
 import { resultsData } from '../../data/index'
 import FadeIn from '../../components/animations/FadeIn'
 import { StaggerContainer, StaggerItem } from '../../components/animations/StaggerContainer'
+
+const INITIAL_VISIBLE = 6
 
 function StatCard({ stat }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
@@ -22,6 +24,14 @@ function StatCard({ stat }) {
 }
 
 export default function ResultsPreview() {
+  const [expanded, setExpanded] = useState(false)
+
+  const visibleToppers = expanded
+    ? resultsData.toppers
+    : resultsData.toppers.slice(0, INITIAL_VISIBLE)
+
+  const hasMore = resultsData.toppers.length > INITIAL_VISIBLE
+
   return (
     <section className="section-pad bg-cta-gradient relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -59,32 +69,65 @@ export default function ResultsPreview() {
               <div className="flex items-center gap-2 mb-6">
                 <Trophy size={20} className="text-yellow-500" />
                 <h3 className="text-[#111] font-bold text-lg font-display">Recent Toppers</h3>
+                <span className="ml-auto text-xs text-[#999] font-medium">
+                  {expanded ? resultsData.toppers.length : Math.min(INITIAL_VISIBLE, resultsData.toppers.length)} of {resultsData.toppers.length}
+                </span>
               </div>
-              <StaggerContainer
-                className="toppers-grid grid gap-4"
-                style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
-              >
-                {resultsData.toppers.map(t => (
-                  <StaggerItem key={t.name}>
-                    <div className="topper-card bg-[#f9fafb] rounded-[16px] p-4 border border-gray-100">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#111] font-bold text-sm">{t.name}</span>
-                        <span className="percentage-badge text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded font-bold text-sm border border-emerald-100">
-                          {t.percentage}
-                        </span>
+
+              {/* Toppers list with fade mask when collapsed */}
+              <div className="relative">
+                <StaggerContainer
+                  className="toppers-grid grid gap-3"
+                  style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
+                >
+                  {visibleToppers.map(t => (
+                    <StaggerItem key={t.name}>
+                      <div className="topper-card bg-[#f9fafb] rounded-[16px] p-4 border border-gray-100">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-[#111] font-bold text-sm">{t.name}</span>
+                          <span className="percentage-badge text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded font-bold text-sm border border-emerald-100">
+                            {t.percentage}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-[#666] text-xs">
+                          <span>{t.class}</span>
+                          <span>·</span>
+                          <span>{t.subject}</span>
+                          <span>·</span>
+                          <span>{t.year}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 text-[#666] text-xs">
-                        <span>{t.class}</span>
-                        <span>·</span>
-                        <span>{t.subject}</span>
-                        <span>·</span>
-                        <span>{t.year}</span>
-                      </div>
-                    </div>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-              <div className="text-center mt-8">
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+
+                {/* Fade gradient when collapsed and more items exist */}
+                {!expanded && hasMore && (
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, transparent, #ffffff)' }}
+                  />
+                )}
+              </div>
+
+              {/* Toggle expand/collapse button */}
+              {hasMore && (
+                <div className="text-center mt-5">
+                  <button
+                    onClick={() => setExpanded(prev => !prev)}
+                    className="inline-flex items-center gap-1.5 px-5 py-2 text-sm font-semibold text-[#555] bg-gray-100 hover:bg-gray-200 rounded-full border border-gray-200 transition-all duration-200 hover:-translate-y-0.5"
+                  >
+                    {expanded ? (
+                      <><ChevronUp size={15} /> Show Less</>
+                    ) : (
+                      <><ChevronDown size={15} /> Show {resultsData.toppers.length - INITIAL_VISIBLE} More Toppers</>
+                    )}
+                  </button>
+                </div>
+              )}
+
+              {/* CTA */}
+              <div className="text-center mt-6">
                 <Link
                   to="/results"
                   className="results-cta inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#111] text-white rounded-full text-sm font-semibold hover:bg-black transition-colors mx-auto"
