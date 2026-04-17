@@ -38,7 +38,7 @@ export default function FloatingCTA() {
                   <X size={14} />
                 </button>
                 <p className="text-xs font-semibold text-slate-800">👋 Chat with us on WhatsApp!</p>
-                <p className="text-xs text-slate-500 mt-0.5">Ask us about admissions & batches.</p>
+                <p className="text-xs text-slate-500 mt-0.5">Ask us about admissions & batches and more.</p>
               </motion.div>
             )}
           </AnimatePresence>
