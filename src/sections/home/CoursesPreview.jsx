@@ -13,7 +13,7 @@ export default function CoursesPreview() {
         <SectionHeader
           eyebrow="Our Programs"
           title="Courses We Offer"
-          subtitle="Structured learning programs for Classes 1 to 8, covering CBSE, ICSE, and BSE Odisha students in both Odia and English medium."
+          subtitle="Structured learning programs for Classes 1 to 10, covering CBSE, ICSE, and BSE Odisha students in both Odia and English medium."
         />
 
         <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10">
