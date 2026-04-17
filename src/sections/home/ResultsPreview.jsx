@@ -10,7 +10,7 @@ import { StaggerContainer, StaggerItem } from '../../components/animations/Stagg
 function StatCard({ stat }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
   return (
-    <div ref={ref} className="text-center">
+    <div ref={ref} className="stat-card-item text-center cursor-default">
       <div className="stat-title text-4xl md:text-5xl font-bold font-display text-[#111] mb-2">
         {inView ? (
           <CountUp end={stat.value} duration={2.5} decimals={stat.decimals || 0} suffix={stat.suffix} />
@@ -46,7 +46,10 @@ export default function ResultsPreview() {
           </FadeIn>
 
           {/* Stats */}
-          <div className="stats-grid mb-16 grid gap-5 text-center" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))' }}>
+          <div
+            className="stats-grid mb-16 grid gap-4 text-center"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))' }}
+          >
             {resultsData.stats.map(s => <StatCard key={s.label} stat={s} />)}
           </div>
 
@@ -57,13 +60,18 @@ export default function ResultsPreview() {
                 <Trophy size={20} className="text-yellow-500" />
                 <h3 className="text-[#111] font-bold text-lg font-display">Recent Toppers</h3>
               </div>
-              <StaggerContainer className="toppers-grid grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+              <StaggerContainer
+                className="toppers-grid grid gap-4"
+                style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
+              >
                 {resultsData.toppers.map(t => (
                   <StaggerItem key={t.name}>
                     <div className="topper-card bg-[#f9fafb] rounded-[16px] p-4 border border-gray-100">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-[#111] font-bold text-sm">{t.name}</span>
-                        <span className="text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded font-bold text-sm border border-emerald-100">{t.percentage}</span>
+                        <span className="percentage-badge text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded font-bold text-sm border border-emerald-100">
+                          {t.percentage}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2 text-[#666] text-xs">
                         <span>{t.class}</span>
@@ -77,7 +85,10 @@ export default function ResultsPreview() {
                 ))}
               </StaggerContainer>
               <div className="text-center mt-8">
-                <Link to="/results" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#111] text-white rounded-full text-sm font-semibold hover:bg-black transition-colors mx-auto">
+                <Link
+                  to="/results"
+                  className="results-cta inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#111] text-white rounded-full text-sm font-semibold hover:bg-black transition-colors mx-auto"
+                >
                   View All Results <ArrowRight size={15} />
                 </Link>
               </div>

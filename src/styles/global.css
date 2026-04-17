@@ -142,3 +142,76 @@
   font-feature-settings: "tnum";
 }
 
+/* ═══════════════════════════════════════════════
+   Results Section — Premium Micro-Interactions
+   ═══════════════════════════════════════════════ */
+
+/* Card wrapper: subtle shadow depth on hover */
+.results-card {
+  transition: box-shadow 0.4s ease;
+}
+.results-card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+}
+
+/* Stat cards: lift + soft glow */
+.stat-card-item {
+  padding: 20px 12px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  will-change: transform;
+}
+.stat-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  background: #f9fafb;
+}
+
+/* Topper cards: lift + accent bar */
+.topper-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  will-change: transform;
+}
+.topper-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #ECFC3A;
+  border-radius: 16px 0 0 16px;
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+.topper-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  background: #ffffff;
+}
+.topper-card:hover::before {
+  width: 4px;
+}
+
+/* Percentage badge: scale pop on card hover */
+.topper-card .percentage-badge {
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.topper-card:hover .percentage-badge {
+  background: #ECFC3A;
+  color: #111;
+  border-color: #d4e234;
+  transform: scale(1.06);
+}
+
+/* CTA button: lift + depth */
+.results-cta {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.results-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
