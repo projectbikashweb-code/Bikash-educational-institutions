@@ -9,9 +9,9 @@ export default function CTASection() {
   return (
     <section className="section-pad bg-slate-50">
       <div className="container-main">
-        <div className="grid lg:grid-cols-2 gap-10 items-center bg-white rounded-4xl shadow-soft border border-slate-100 overflow-hidden">
+        <div className="grid lg:grid-cols-2 items-stretch bg-white rounded-4xl shadow-soft border border-slate-100 overflow-hidden">
           {/* Left */}
-          <FadeIn className="p-10 lg:p-14">
+          <FadeIn className="p-10 lg:p-14 flex flex-col justify-center h-full">
             <span className="badge bg-green-50 text-green-700 border border-green-100 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 inline-block">
               🎓 Limited Seats Available
             </span>
@@ -39,7 +39,7 @@ export default function CTASection() {
           </FadeIn>
 
           {/* Right - Form */}
-          <FadeIn direction="right" className="bg-primary-700 p-10 lg:p-14">
+          <FadeIn direction="right" className="bg-primary-700 p-10 lg:p-14 flex flex-col justify-center h-full w-full">
             <h3 className="text-xl font-bold text-white mb-2 font-display">Quick Enquiry</h3>
             <p className="text-white/70 text-sm mb-6">We'll call you back within 24 hours</p>
             <EnquiryForm light />
