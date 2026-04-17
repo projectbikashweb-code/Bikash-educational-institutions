@@ -215,3 +215,190 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* ═══════════════════════════════════════════════
+   Premium Enquiry Form — Micro-Interactions
+   ═══════════════════════════════════════════════ */
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Field group */
+.enquiry-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Label */
+.enquiry-field-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Icon + input wrapper */
+.enquiry-input-wrap {
+  position: relative;
+}
+
+.enquiry-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+/* textarea icon — align to top */
+.enquiry-textarea ~ .enquiry-input-icon,
+.enquiry-input-wrap:has(.enquiry-textarea) .enquiry-input-icon {
+  top: 16px;
+  transform: none;
+}
+
+/* Core input / select / textarea */
+.enquiry-input {
+  width: 100%;
+  padding: 13px 14px 13px 40px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.enquiry-input::placeholder {
+  color: #999;
+}
+
+.enquiry-input:hover {
+  background: #ffffff;
+}
+
+.enquiry-input:focus {
+  background: #ffffff;
+  border-color: #ECFC3A;
+  box-shadow: 0 0 0 3px rgba(236, 252, 58, 0.28);
+}
+
+.enquiry-input:focus + .enquiry-input-icon,
+.enquiry-input-wrap:focus-within .enquiry-input-icon {
+  color: #7a8f00;
+}
+
+/* Error state */
+.enquiry-input.is-error {
+  border-color: #f87171;
+  background: #fff5f5;
+}
+
+.enquiry-field-error {
+  font-size: 0.72rem;
+  color: #fca5a5;
+  margin-top: 2px;
+}
+
+/* Textarea specifics */
+.enquiry-textarea {
+  resize: none;
+  padding-top: 13px;
+  line-height: 1.6;
+}
+
+/* Select arrow */
+.enquiry-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.enquiry-submit {
+  width: 100%;
+  padding: 14px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ECFC3A;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.enquiry-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  background: #1a1a1a;
+}
+
+.enquiry-submit:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.enquiry-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.enquiry-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(236,252,58,0.3);
+  border-top-color: #ECFC3A;
+  border-radius: 50%;
+  animation: eq-spin 0.7s linear infinite;
+}
+
+@keyframes eq-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.enquiry-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 12px;
+  text-align: center;
+}
+
+.enquiry-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ECFC3A;
+  border: 2px solid rgba(236,252,58,0.4);
+}
+
