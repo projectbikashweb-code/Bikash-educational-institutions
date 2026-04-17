@@ -12,7 +12,7 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cover bg-center min-h-screen lg:h-screen lg:max-h-[1000px] flex flex-col justify-center pt-20 pb-8 lg:pt-0" style={{ backgroundImage: "url('/images/heroes/hero-home.jpg')" }}>
+    <section className="relative overflow-hidden bg-cover bg-center min-h-screen lg:h-screen lg:max-h-[1000px] flex flex-col justify-center pt-20 pb-8 lg:pt-0" style={{ backgroundImage: "url('/images/heroes/hero-home.webp')" }}>
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-slate-900/70" />
       
@@ -34,7 +34,7 @@ export default function Hero() {
             >
               <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full mb-5">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Admissions Open 2024–25
+                Admissions Open 2026–27
               </span>
             </motion.div>
 
