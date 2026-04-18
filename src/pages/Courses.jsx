@@ -18,7 +18,7 @@ function PageHero() {
             Courses & Programs
           </h1>
           <p className="text-slate-200 max-w-2xl mx-auto text-lg">
-            Quality education for Classes 1–8, designed to build deep conceptual understanding, academic confidence, and a love for learning.
+            Quality education for Classes 1–10, designed to build deep conceptual understanding, academic confidence, and a love for learning.
           </p>
         </FadeIn>
       </div>
