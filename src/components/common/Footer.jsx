@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-5 font-display">Our Programs</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              {['Primary Education (Class 1–5)', 'Upper Primary (Class 6–8)', 'CBSE / ICSE Preparation', 'BSE Odisha Preparation', 'Concept-Based Learning', 'Exam Prep & Guidance'].map(c => (
+              {['Primary Education (Class 1–5)', 'Upper Primary (Class 6–9)', 'CBSE / ICSE Board Preparation', 'BSE Odisha Preparation', 'Concept-Based Learning', 'Exam Prep & Guidance'].map(c => (
                 <li key={c} className="hover:text-white transition-colors cursor-pointer">{c}</li>
               ))}
             </ul>

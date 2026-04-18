@@ -21,7 +21,7 @@ export const coursesData = [
   {
     id: 2,
     title: 'Upper Primary Education',
-    subtitle: 'Classes 6 – 8',
+    subtitle: 'Classes 6 – 9',
     icon: '📚',
     medium: ['Odia', 'English'],
     subjects: ['Mathematics', 'Science', 'English', 'Social Studies', 'Hindi'],
